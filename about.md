@@ -1,10 +1,12 @@
 ---
 layout: page
-title: About
+title: About Me, AN
 permalink: /about/
 ---
 
 <img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile">
+
+==Hi I am majoring Electrical Engineering, and having fun stuyding software and looking for my future in both integrated, Robot. Car==
 
 Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
 
