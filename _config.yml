@@ -9,12 +9,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Centrarium
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
-email: blcentra@gmail.com
-name: Ben Centra
+title: devAhn's Devlog
+subtitle: "Majoring in Electrical Engineering, Interested in Software"
+email: sang-wooahn@khu.ac.kr
+name: Sangwoo AN
 description: >
-  A simple yet classy theme for your Jekyll website or blog.
+  Welcome to my Devlog.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -42,6 +42,7 @@ jekyll-archives:
 
 # Disqus comments
 # disqus_shortname: bencentra
+disqus_shortname: disqus_tbVQBzku2w
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -70,12 +71,6 @@ descriptions:
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
 social:
-  - name: Twitter
-    icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
-    desc: Follow me on Twitter
-    share: true
 
   - name: Facebook
     icon: facebook
