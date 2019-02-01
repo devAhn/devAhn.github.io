@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to MY Devlog!"
+title:  "Welcome to My Devlog!"
 date:   2019-02-01 12:52:59
 author: Sangwoo AN
 categories: 잡다한글
