@@ -16,7 +16,7 @@ categories: 잡다한글
 
 블로그 구조를 조금씩 개편하고 있습니다. 
 
-제 메일은 ==**sang-wooahn@khu.ac.kr**==  입니다.
+제 메일은 **sang-wooahn@khu.ac.kr**  입니다.
 
 할일 블로그 테마 원래 흔적 지우기
 
