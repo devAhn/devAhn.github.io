@@ -46,7 +46,7 @@ categories: Devlog
 반복문에서 for i in tqdm(): 
 괄호 밖에 tqdm을 써주면 된다. 아래와 같이 표시됌
 
-<img src=“/devahn.github.io/assets/스크린샷 2019-02-04 오후 4.55.06.png" title=“tqdm”>
+<img src=“devahn.github.io/assets/스크린샷 2019-02-04 오후 4.55.06.png" title=“tqdm”>
 
 
 
