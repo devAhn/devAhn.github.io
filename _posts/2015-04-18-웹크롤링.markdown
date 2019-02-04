@@ -1,4 +1,4 @@
---
+---
 layout: post
 title:  "웹 파이썬 크롤링"
 date:   2019-02-04 16:43:52
@@ -6,6 +6,7 @@ author: devAhn
 categories: Devlog
 
 ---
+
 
 
 파이썬 웹 크롤링을 학기중에 제대로 마무리를 못지은게 아쉬워 방중에 다시 시도하고 있다. 
