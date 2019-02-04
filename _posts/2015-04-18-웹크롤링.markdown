@@ -4,7 +4,7 @@ title:  "웹 파이썬 크롤링"
 date:   2019-02-04 16:43:52
 author: devAhn
 categories: Devlog
-
+cover:  "/assets/data.jpeg"
 ---
 
 
