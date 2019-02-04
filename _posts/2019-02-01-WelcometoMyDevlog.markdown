@@ -4,7 +4,7 @@ title:  "블로그 개편 중입니다."
 date:   2019-01-26 22:59:59
 author: Sangwoo AN
 categories: 잡다한글
-
+cover:  "/assets/instacode.png"
 ---
 
 
