@@ -8,7 +8,6 @@ cover:  "/assets/data.jpeg"
 ---
 
 
-
 파이썬 웹 크롤링을 학기중에 제대로 마무리를 못지은게 아쉬워 방중에 다시 시도하고 있다. 
 
 
@@ -27,21 +26,25 @@ cover:  "/assets/data.jpeg"
 **원하는 해결: 그 중에 공학계열, 전자공학과 학우분의 수기만 골라서 보고싶음**
 
 
+{% highlight python %}
+!pip install requests
+import pandas as pd
+from bs4 import BeautifulSoup as bs
+import requests
+{% endhighlight %}
 
 
 ### 시작 전 필요한 셋업들이다.(Anaconda 의 Jupyternotebook 기반으로 작성하였다.)
-
-<div class="colorscripter-code" style="color:#f0f0f0; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important; overflow:auto"><table class="colorscripter-code-table" style="margin:0; padding:0; border:none; background-color:#272727; border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px; border-right:2px solid #4f4f4f"><div style="margin:0; padding:0; word-break:normal; text-align:right; color:#aaa; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0"><div style="margin:0; padding:0; color:#f0f0f0; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3"></span><span style="color:#ff3399">!</span>pip&nbsp;install&nbsp;requests</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">import</span>&nbsp;pandas&nbsp;as&nbsp;pd</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">from</span>&nbsp;bs4&nbsp;<span style="color:#ff3399">import</span>&nbsp;BeautifulSoup&nbsp;as&nbsp;bs</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">import</span>&nbsp;requests</div></div></td><td style="vertical-align:bottom; padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none; color:white"><span style="font-size:9px; word-break:normal; background-color:#4f4f4f; color:white; border-radius:10px; padding:1px">cs</span></a></td></tr></table></div>
-
-
 
 
 아래 라이브러리는 해놓으면 설치진도를 눈으로 확인할 수 있어 에러가 난 것인지 실행하는데 시간이 오래 걸리는 것인지 알 수 있다.
 
 
+{% highlight python %}
+!pip install tqdm
+from tqdm import *
+{% endhighlight %}
 
-
-<div class="colorscripter-code" style="color:#f0f0f0; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important; overflow:auto"><table class="colorscripter-code-table" style="margin:0; padding:0; border:none; background-color:#272727; border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px; border-right:2px solid #4f4f4f"><div style="margin:0; padding:0; word-break:normal; text-align:right; color:#aaa; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0"><div style="margin:0; padding:0; color:#f0f0f0; font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3"></span><span style="color:#ff3399">!</span>pip&nbsp;install&nbsp;tqdm</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">from</span>&nbsp;tqdm&nbsp;<span style="color:#ff3399">import</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">*</span></div></div></td><td style="vertical-align:bottom; padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none; color:white"><span style="font-size:9px; word-break:normal; background-color:#4f4f4f; color:white; border-radius:10px; padding:1px">cs</span></a></td></tr></table></div>
 
 반복문에서 for i in tqdm(): 
 괄호 밖에 tqdm을 써주면 된다. 아래와 같이 표시됌
