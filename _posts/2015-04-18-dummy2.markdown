@@ -14,3 +14,28 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+search=(input("검색어를 입력하세요."))
+search= str(search.encode('utf-8'))
+search=search.replace("\\",'%').replace('x','').upper().replace("'","")[1:]
+driver = webdriver.Chrome(r'C:\Users\sub_account\Desktop\python\chromedriver')
+# url = input("검색  ")
+driver.get('https://www.youtube.com/results?search_query='+search)
+# 'https://www.youtube.com/results?search_query=%EC%A0%95%EB%8F%99%EC%84%9D%EB%AA%A9%EC%82%AC%EC%84%A4%EA%B5%90/')
+
+body = driver.find_element_by_tag_name("body")
+num_of_pagedowns = 0  # 50
+time.sleep(1.5)
+
+while num_of_pagedowns:
+    body.send_keys(Keys.PAGE_DOWN)
+    time.sleep(1.2)
+    num_of_pagedowns -= 1
+    try:
+        driver.find_element_by_xpath().click()
+    except:
+        None
+
+html = driver.page_source
+
+soup = BeautifulSoup(html, 'lxml')
