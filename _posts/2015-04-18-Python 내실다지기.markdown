@@ -7,4 +7,4 @@ categories: Devlog
 
 ---
 
-1. class 는 자료형
+1. class 는 자료형 type
