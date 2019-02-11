@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python 내실 다지기(keep updating)"
+title:  "Python Class 개념(keep updating)"
 date:   2019-02-09 02:13:09
 author: 안상우
 categories: Devlog
