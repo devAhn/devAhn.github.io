@@ -4,7 +4,7 @@ title:  "Python 내실 다지기(keep updating)"
 date:   2019-02-09 02:13:09
 author: 안상우
 categories: Devlog
-
+cover:  "/assets/pyhon.jpg"
 ---
 
 클래스의 개념이 약하니 PyQt 를 사용할 때 힘들어 관련 내용을 복습하고 정리해보기로 하였다!
@@ -31,4 +31,37 @@ class Human():
     def speak(self,message):
         print(message)
 {% endhighlight %}
+
 클래스는 str이나 int 와 같은 자료형을 말한다. 내가 클래스를 만들어주고 관련 함수를 편하게 쓰려고 내장 시켜주는게 "method" 이다. 
+메소드 : 클래스안 에 있는 함수
+메소드 : 클래스에 묶여서 클래스의 인스턴스와 관계되는 일을 하는 함수
+
+{% highlight python %}
+class Human():
+    '''인간'''
+    def __init__(self, name, weight):
+        '''초기화 함수'''
+        self.name=name
+        self.weight=weight
+        
+    def __str__(self):
+        '''문자열화 함수'''
+        return "{}(몸무게 {}kg)".format(self.name,self.weight)
+    def eat(self):
+        self.weight+=0.1
+        print("{}가 먹어서 {}kg이 되었습니다.".format(person.name,person.weight))
+
+    def walk(self):
+        self.weight-=0.1
+        print("{}가 걸어서 {}kg가 되었습니다.".format(person.name,person.weight))
+    
+    def speak(self,message):
+        print(message)
+   
+{% endhighlight %}
+
+대부분의 클래스는 __init__ 을 통해 인스턴스를 만들어준다.
+여기서 인스턴스란? 클래스의 종류에 속하는 개별 객체를 말한다. 
+흔히들 비유하는 붕어빨 틀로 찍어낸 조금씩 다른 붕어빵 하나하나가 틀이란
+클래스의 인스턴스이다. 조금 더 정확한 비유로 말하면 인간 클래스의 
+철수, 민희, 민지 같은 인스턴스들이 있을 수 있다. 
