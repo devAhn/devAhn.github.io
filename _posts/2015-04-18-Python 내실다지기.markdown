@@ -71,3 +71,127 @@ class Human():
 
 
 그런데! 다음과 같이 세 개의 클래스가 있다고 가정해보자 Animal, Cow, Dog
+이런 경우에 Animal 클래스 하나가 Cow 와 Dog 클래스 두 개의 상위 그룹일 것이다.
+동물은 먹으니 "먹는다"는 애니멀의 Method를 Cow와 Dog이 공유할 것이다. 이렇게 클래스가 다른
+클래스에게 메소드를 전해주는 것을 "상속" 이라고 한다. 
+
+{% highlight python %}
+
+class Animal():
+    
+    def walk(self):
+        print("걷는다")
+        
+    def eat(self):
+        print("먹는다")
+    
+    def greet(self):
+        print("인사한다.")
+
+        
+class Cow(Animal):
+    '''소'''
+    
+class Human(Animal):
+     
+    def wave(self):
+        print("손을 흔든다.")
+        
+    def greet(self):
+        self.wave()
+        
+class Dog(Animal):
+    
+    def wag(self):
+        print("꼬리를 흔든다")
+        
+    def greet(self):
+        self.wag()
+        
+        
+# 상속(inherit) 부모가 자식들에게 메소드를 똑같이 쓰게 물려줄 수 있다. 
+# 동물 -> 사람, 개
+# Override : 자식 클래스는 부모의 것을 상속받지만 똑같은 메소드를 만듦으로서 덮어쓸수 있다.
+
+{% endhighlight %}
+
+그런데 부모의 여러 함수를 상속받았느데 특정 함수는 자식만의 것으로 바꾸고 싶다면 어떻게 해야할까?
+이럴 때 사용하는 것이 Override 오버라이드 이다. 
+
+{% highlight python %}
+class Animal():
+    
+    def walk(self):
+        print("걷는다")
+        
+    def eat(self):
+        print("먹는다")
+    
+    def greet(self):
+        print("인사한다.")
+
+        
+class Cow(Animal):
+    '''소'''
+class Human(Animal):
+     
+    def wave(self):
+        print("손을 흔든다.")
+        
+    def greet(self):
+        self.wave()
+        
+class Dog(Animal):
+    
+    def wag(self):
+        print("꼬리를 흔든다")
+        
+    def greet(self):
+        self.wag()
+        
+        #위와 같이 그냥 덧붙여 사용해주면 된다.
+        
+{% endhighlight %}
+
+세상에는 다양한 사람과 다양한 경우가 있다.
+한 단계 더 나아가서 생각해보자. 오버라이드를 했는데 특정 패러미터,
+혹 특정 함수는 부모의 것을 쓰고 싶을 때는 어떡할까? 
+super().원하는메소드(패러미터) 로 처리하면 된다.
+다음 코드에서 보여주겠다.
+{% highlight python %}
+
+#부모의 동작은 그대로 하면서 동작을 끼 어넣어?
+class Animal():
+    
+    def __init__ (self, name): # 대부분의 클래스가 갖고 있는 초기화
+        self.name= name
+        
+    def walk(self):
+        print("걷는다")
+        
+    def eat(self):
+        print("먹는다")
+    
+    def greet(self):
+        print("{}이/가 인사한다.".format(self.name))
+
+class Human(Animal):
+
+    def __init__(self,name,hand):
+        super().__init__(name) # name과 관련된 것은 부모가 처리하게 해준다. 
+        self.hand= hand
+
+    def wave(self):
+        print("{}을 흔들면서".format(self.hand ))
+        
+        
+    def greet(self):
+        self.wave()
+        super().greet()
+        
+
+{% endhighlight %}
+
+아직 Class에 대한 내용이 완벽히 정리가 되지는 않았지만 그래도
+대충 체계는 잡힌 거 같다. 
+더 많은 분들의 생각과 의견을 찾아보고, 실습을 해보며 굳혀야 겠다.
