@@ -50,18 +50,20 @@ class Human():
     def eat(self):
         self.weight+=0.1
         print("{}가 먹어서 {}kg이 되었습니다.".format(person.name,person.weight))
-
-    def walk(self):
-        self.weight-=0.1
-        print("{}가 걸어서 {}kg가 되었습니다.".format(person.name,person.weight))
-    
-    def speak(self,message):
-        print(message)
    
 {% endhighlight %}
 
-대부분의 클래스는 __init__ 을 통해 인스턴스를 만들어준다.
+대부분의 클래스는 __init__ 을 통해 인스턴스를 만들어준다. 
+"초기화"라고도 한다. 매번 같은 기능을 공유하는 
+새로운 객체를 만들어준다는 의미인것 같다. 
 여기서 인스턴스란? 클래스의 종류에 속하는 개별 객체를 말한다. 
 흔히들 비유하는 붕어빨 틀로 찍어낸 조금씩 다른 붕어빵 하나하나가 틀이란
 클래스의 인스턴스이다. 조금 더 정확한 비유로 말하면 인간 클래스의 
 철수, 민희, 민지 같은 인스턴스들이 있을 수 있다. 
+
+또한 클래스 밑에 있는 함수, 즉 메소드들은 모두 첫번쨰 parameter로 self를 자동으로 갖는다.
+안써있다고 하더라도 생략되있는 것뿐 모두 갖고 있다.
+
+{% highlight python %}
+
+{% endhighlight %}
