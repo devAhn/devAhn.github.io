@@ -74,17 +74,17 @@ social:
 
   - name: Facebook
     icon: facebook
-    username: thebencentra
-    url:
+    username: devSangwoo
+    url: https://www.facebook.com/devSangwoo
     desc: Friend me on Facebook
     share: true
 
   - name: GitHub
     icon: github
-    username: bencentra
-    url: https://github.com/bencentra
+    username: devAhn
+    url: https://github.com/devAhn
     desc: Fork me on GitHub
-    share: false
+    share: true
 
   - name: LinkedIn
     icon: linkedin
