@@ -6,6 +6,9 @@ author: 안상우
 categories: Devlog
 ---
 
+
+
+
 {% highlight python %}
 from __future__ import unicode_literals
 from selenium import webdriver
@@ -126,4 +129,7 @@ vids[vnum].download(directory)
 
 print("완료")
 
+
+
 {% endhighlight %}
+
