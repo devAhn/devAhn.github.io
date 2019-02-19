@@ -3,7 +3,7 @@ layout: post
 title:  "d_tube_project"
 date:   2019-02-19 18:43:59
 author: 안상우
-categories: Dummy
+categories: Devlog
 ---
 
 {% highlight python %}
