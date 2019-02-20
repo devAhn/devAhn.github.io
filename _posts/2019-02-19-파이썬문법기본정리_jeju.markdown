@@ -13,10 +13,7 @@ cover:  "/assets/jeju.jpg"
 
 ```python
 h = {1, 2, 3, 4, 5} # => set
-dir(h) # __underbar__ 는 속성에 대한 정리
-       # 언더바 없는것은 자주 쓰는 기능 정리 
-    
-
+dir(h)
 ```
 
 
@@ -24,66 +21,25 @@ dir(h) # __underbar__ 는 속성에 대한 정리
 
     ['__and__',
      '__class__',
-     '__contains__',
-     '__delattr__',
-     '__dir__',
-     '__doc__',
-     '__eq__',
-     '__format__',
-     '__ge__',
-     '__getattribute__',
-     '__gt__',
-     '__hash__',
-     '__iand__',
-     '__init__',
-     '__init_subclass__',
-     '__ior__',
-     '__isub__',
-     '__iter__',
-     '__ixor__',
-     '__le__',
-     '__len__',
-     '__lt__',
-     '__ne__',
-     '__new__',
-     '__or__',
-     '__rand__',
-     '__reduce__',
-     '__reduce_ex__',
-     '__repr__',
-     '__ror__',
-     '__rsub__',
-     '__rxor__',
-     '__setattr__',
-     '__sizeof__',
-     '__str__',
      '__sub__',
-     '__subclasshook__',
+     '
+     '
+     '
      '__xor__',
-     'add',
-     'clear',
-     'copy',
-     'difference',
-     'difference_update',
-     'discard',
-     'intersection',
-     'intersection_update',
-     'isdisjoint',
-     'issubset',
-     'issuperset',
      'pop',
      'remove',
      'symmetric_difference',
-     'symmetric_difference_update',
-     'union',
      'update']
 
 
 
+- __underbar__ 는 속성에 대한 정리
+- 언더바 없는것은 자주 쓰는 기능 정리 
+
 
 ```python
 a = "hello world"
-b = a.split() # 디폴트는 공백기준
+b = a.split()
 b
 ```
 
@@ -94,9 +50,11 @@ b
 
 
 
+디폴트는 공백기준
+
 
 ```python
-' '.join(b) #리스트들을 "기준" 으로 합친다. 
+' '.join(b) 
 ```
 
 
@@ -106,11 +64,21 @@ b
 
 
 
+리스트들을 "기준" 으로 합친다. 
+
+range(start, stop, step)
+
 
 ```python
-# range(start, stop, step)
 range(1,10,2)
 ```
+
+
+
+
+    range(1, 10, 2)
+
+
 
 
 ```python
@@ -143,15 +111,14 @@ print('제 이름은 ',name,'입니다.')
     제 이름은  제주도 입니다.
 
 
+shell program 터미널이나 유닉스 프로그램의 기본원리라고 생각하면 된다. 
+
 
 ```python
 while True:
     x=input('##')
     if x == 'exit':
         break
-        
-# shell program 터미널이나 유닉스 프로그램의 기본원리라고 생각하면 된다. 
-
 ```
 
     ##hi
@@ -184,6 +151,9 @@ a = 10
 b = 3
 ```
 
+#### / VS // VS %
+#### / 와 // 와 % 의 차이
+
 
 ```python
 print(a/b)  # 그냥 할 수 있는데 까지 계산 결과를 보여줌.
@@ -213,7 +183,6 @@ if score > 70 :
     money += 10000 # 누적을 의미한다.
     
 print(money)
-# 결과를 보면 전부 다 거치게 된다 . 한 세트롤 사용하고 싶을 떄 이를 해결하려면? 
 ```
 
     mom : i'm so happy
@@ -222,6 +191,8 @@ print(money)
     1110000
 
 
+결과를 보면 전부 다 거치게 된다 . 한 세트롤 사용하고 싶을 떄 이를 해결하려면? 
+
 
 ```python
 score = 91 
@@ -229,7 +200,7 @@ money = 0
 if score > 90 :
     print('mom : i\'m so happy') # escape 여러 가지가 있다. 다른 언어에서도 공통으로 쓴다.
     money += 1000000 # 누적을 의미한다.
-elif score > 80 : # 그렇지 않고 만약에?? &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&집합 개념 거르는 걸로 생각
+elif score > 80 : # 그렇지 않고 만약에?? 집합 개념 거르는 걸로 생각
     print('mom : i\'m so happy')
     money += 100000 
 elif score > 70 : # 그렇지 않고 만약에??
@@ -295,24 +266,22 @@ append 불가능합니다.
 ### dictionary
 
 
-```python
-d= {'one': 1, 'two': 2}
-
-'''
 1. 딕셔너리 안에는 다른 object들이 들어갈 수 있습니다.
 2. 값을 변화시킬 수 있습니다.
 3. 순서가 없습니다.
-# 제일 유사한 게 json
+#### 제일 유사한 게 json
+#### (key:value, key:value)
+#### json => list 안에 딕셔너리
 
-'''
 
-#(key:value, key:value)
-#json => list 안에 딕셔너리
+
+```python
+d= {'one': 1, 'two': 2}
 
 print(d['one'])
 print(type(d))
 print(dir(d))
-print(d.values()) ########자주 쓰는 거 3개
+print(d.values()) #자주 쓰는 거 3개
 print(d.keys())
 print(d.items())
 d['three'] = 3 # 키 밸류 값 추가
@@ -337,14 +306,16 @@ d
 ### set
 
 
-```python
-s= {1,2,3,4,4,4,4}
-'''
 1. 집합은 중복을 허락하지 않는다. 
 2. 순서가 없습니다. 
 
-set 자료형으로 바꾸면 중복값을 없애줄수 있다. 
-'''
+#### set 자료형으로 바꾸면 중복값을 없애줄수 있다. 
+
+
+
+```python
+s= {1,2,3,4,4,4,4}
+
 ```
 
 
@@ -356,11 +327,13 @@ set 자료형으로 바꾸면 중복값을 없애줄수 있다.
 
 # 파일 입출력 
 
+ 이러면 엑셀로도 열 수 있다. csv 니까.
+
 
 ```python
 f = open("인공지능캠프.txt",'w')
 for i in range(1,6):
-    data = '%d명, 참여,중입니다.'%i  # 이러면 엑셀로도 열 수 있다. csv 니까.
+    data = '%d명, 참여,중입니다.'%i  
     f.write(data)
 f.close()
 ```
@@ -411,7 +384,7 @@ locker['ami']= 4321 # 값을 변경해 줄 수 있다.
 ```python
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9] #, 하고 띄우는 습관은 좋은 습관인 것 같다. 
 
-for n in nums: ######################################################### 퍼센트와 // 두 개 차이 잘 알아놓기 
+for n in nums: # 퍼센트와 // 두 개 차이 잘 알아놓기 
     if n % 2 == 0:
         print(n)
 ''' 아래 위가 같다. '''        
@@ -426,6 +399,8 @@ new_list = [n for n in range(10) if n%2 == 0]
 
 
 ## 밑 부분은 아직 이해가 안갑니다,
+
+- list comprehension # 리스트 컴프리헨션
 
 
 ```python
