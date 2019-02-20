@@ -1,4 +1,13 @@
-2019-02-19-ctube.markdown
+---
+layout: post
+title:  "제주코딩캠프_복습 (1.기본문법)"
+date:   2019-02-20 10:49:59
+author: 안상우
+categories: Devlog
+cover:  "/assets/pyhon.jpg"
+---
+
+
 # Pythonic - readable, share, easy to follow
 
 
