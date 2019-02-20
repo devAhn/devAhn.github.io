@@ -89,7 +89,7 @@ social:
   - name: LinkedIn
     icon: linkedin
     username: devahn
-    url: www.linkedin.com/in/devahn
+    url: https://www.linkedin.com/in/devahn/
     desc: Connect with me on LinkedIn
     share: true
 
