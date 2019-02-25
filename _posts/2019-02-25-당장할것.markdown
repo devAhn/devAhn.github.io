@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "당장 할것"
+date:   2019-02-25 16:43:52
+author: 안상우
+categories: 잡다한글
+cover:  "/assets/plan.jpg"
+---
+
+
+
+
+## 정보처리기능사
+## 일반물리학
+## C++
