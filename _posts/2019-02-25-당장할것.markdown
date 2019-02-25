@@ -13,3 +13,9 @@ cover:  "/assets/plan.jpg"
 ## 정보처리기능사
 ## 일반물리학
 ## C++
+
+
+### 방학 전에 할 것
+#### 핸드폰 ch + sd
+#### Tstory vlog
+#### max Cpp & Physics
