@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "블로그 이사가유"
+date:   2019-03-01 16:43:52
+author: 안상우
+categories: 잡다한글
+cover:  "/assets/bigdata.jpg"
+---
+
+
+
+https://devan97.tistory.com/ 
+
+블로그 이사가유
+
+시간 날때마다 조금씩 옮길 계획입니다!!~!
